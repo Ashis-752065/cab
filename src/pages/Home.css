@@ -1,0 +1,517 @@
+:root {
+  --primary-color: #00acc1;
+  --secondary-color: #e53935;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section with Carousel */
+.hero-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #08d181, #73199b), url('https://source.unsplash.com/1600x900/?travel');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.carousel-content {
+  flex: 1;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  max-width: 50%;
+  z-index: 2;
+}
+
+.carousel-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.carousel-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.carousel-image {
+  flex: 1;
+  height: 45%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  right: 0;
+  top: 30px;
+  bottom: 0;
+  width: 50%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #c62828;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: var(--white);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+  z-index: 3;
+}
+
+.carousel-control:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Booking Section Styles */
+.booking-section {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.booking-container {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.booking-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #f5f5f5;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.booking-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Packages and Fleets Section Styles */
+.packages-section,
+.fleets-section {
+  padding: 80px 0;
+  background-color: var(--background-color);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.packages-container,
+.fleets-container {
+  position: relative;
+}
+
+.packages-grid,
+.fleets-grid {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.packages-grid::-webkit-scrollbar,
+.fleets-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.package-card,
+.fleet-card {
+  flex: 0 0 300px;
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.package-card:hover,
+.fleet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.package-image,
+.fleet-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.package-info,
+.fleet-info {
+  padding: 20px;
+}
+
+.package-info h3,
+.fleet-info h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.package-price,
+.fleet-price {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(120, 120, 120);
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.scroll-btn.prev {
+  left: -20px;
+}
+
+.scroll-btn.next {
+  right: -20px;
+}
+
+/* How It Works Section Styles */
+.how-it-works {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.step {
+  flex: 1;
+  padding: 20px;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--white);
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.step:hover .step-icon {
+  transform: scale(1.1);
+}
+
+.step h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* Services Section Styles */
+.services-section {
+  padding: 80px 0;
+  background: var(--background-color);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  text-align: center;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+/* Fixed Contact Buttons */
+.fixed-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.whatsapp-btn,
+.call-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp-btn:hover,
+.call-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+}
+
+.call-btn {
+  background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .carousel-content h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-item {
+    flex-direction: column;
+  }
+
+  .carousel-content,
+  .carousel-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .carousel-image {
+    position: relative;
+    height: 50vh;
+  }
+
+  .steps {
+    flex-wrap: wrap;
+  }
+
+  .step {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-form {
+    flex-direction: column;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .package-card,
+  .fleet-card {
+    flex: 0 0 250px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-content h1 {
+    font-size: 2em;
+  }
+
+  .carousel-content p {
+    font-size: 1em;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .step {
+    flex-basis: 100%;
+  }
+
+  .carousel-image {
+    height: 30vh;
+  }
+
+  .fixed-contact {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .whatsapp-btn,
+  .call-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
