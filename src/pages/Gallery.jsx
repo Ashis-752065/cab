@@ -29,8 +29,8 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
-      <section className="hero">
-        <div className="hero-content">
+      <section className="gallery-hero">
+        <div className="gallery-hero-content">
           <h1>Our Travel Gallery</h1>
           <p>Explore the beautiful destinations and experiences we offer through our captivating photo gallery.</p>
         </div>

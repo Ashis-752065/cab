@@ -1,10 +1,8 @@
-.packages-page {
-  padding-top: 80px;
-}
 
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  no-repeat center center/cover;
-  height: 50vh;
+
+.package-hero {
+  background:  url('/public/img/Tourism1.png') no-repeat center center/cover;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,8 +44,8 @@
   margin-bottom: 40px;
 }
 
-.packages-grid {
-  display: flex;
+.package-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
@@ -66,6 +64,7 @@
 }
 
 .package-image {
+  position: relative;
   width: 100%;
   height: 200px;
   overflow: hidden;
@@ -80,6 +79,24 @@
 
 .package-card:hover .package-image img {
   transform: scale(1.1);
+}
+
+.package-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.package-card:hover .package-overlay {
+  opacity: 1;
 }
 
 .package-info {
@@ -144,9 +161,10 @@
   transform: translateY(-10px);
 }
 
-.feature-icon {
-  font-size: 3rem;
-  color: var(--primary-color);
+.feature-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin-bottom: 20px;
 }
 
@@ -161,6 +179,12 @@
   color: #666;
 }
 
+@media (max-width: 1024px) {
+  .packages-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
@@ -171,21 +195,25 @@
   }
 
   .packages-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .section-title {
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
   .hero h1 {
     font-size: 2rem;
   }
 
   .packages-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
   }
 
   .feature-item {

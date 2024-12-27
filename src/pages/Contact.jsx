@@ -21,9 +21,27 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (Object.values(formData).every(field => field.trim() !== '')) {
-      console.log('Form submitted:', formData);
-      // Here you would typically send the data to a server
-      alert('Form submitted successfully!');
+      // Prepare WhatsApp message
+      const message = `Hello Rajesh Jii !A New Contact Form Submission:
+Name: ${formData.name}
+Email: ${formData.email}
+Mobile: ${formData.mobile}
+Subject: ${formData.subject}
+Message: ${formData.message}`;
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(message);
+
+      // WhatsApp API URL (replace with your admin's number)
+      const whatsappUrl = `https://wa.me/918658696065?text=${encodedMessage}`;
+
+      // Show success alert
+      alert('Your form submitted successfully!');
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -89,7 +107,7 @@ function Contact() {
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
-              <button type="submit">Contact Us</button>
+              <button type="submit" className='contact-btn'>Contact Us</button>
             </form>
           </div>
           <div className="contact-info">

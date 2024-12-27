@@ -24,6 +24,7 @@
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  
 }
 
 .form-group {
@@ -80,7 +81,8 @@
   font-weight: bold;
   transition: background 0.3s;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 85px;
+  max-height: 50px;
 }
 
 .submit-btn:hover {

@@ -50,7 +50,7 @@ const Navbar = () => {
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
           <img src="/img/a1_tour_logo.png" alt="A1 Tour&Travels Logo" />
         </Link>
-        <div className={`menu-icon ${hideNav ? '' : 'hide'}`} onClick={toggleMenu}>
+        <div className="menu-icon" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </div>
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>

@@ -9,16 +9,16 @@ function CabExplore() {
 
   const cabs = [
     { id: 2, type: 'sedan', capacity: '4', name: 'Economy Sedan', image: '/img/Wagnor.png', price: '₹800/day' },
-    { id: 1, type: 'sedan', capacity: '4', name: 'Comfortable Sedan', image: '/img/Dzire_car.png', price: '₹1000/day' },
+    { id: 1, type: 'sedan', capacity: '4', name: 'Comfortable Sedan', image: '/img/dzire.png', price: '₹1000/day' },
     { id: 3, type: 'seden', capacity: '4', name: 'Luxury Sedan', image: '/img/Etios.png', price: '₹1300/day' },
-    { id: 4, type: 'seden', capacity: '4', name: 'Premium Sedan', image: '/img/premium-sedan.jpg', price: '₹2500/day' },
+    { id: 4, type: 'seden', capacity: '4', name: 'Premium Sedan', image: '/img/Verna.png', price: '₹2500/day' },
     { id: 5, type: 'suv', capacity: '6', name: 'Spacious SUV', image: '/img/crysta.png', price: '₹1800/day' },
-    { id: 6, type: 'suv', capacity: '6', name: 'Compact SUV', image: '/img/Ertiga.png', price: '₹1300/day' },
+    { id: 6, type: 'suv', capacity: '6', name: 'Compact SUV', image: '/img/Ertiga3.png', price: '₹1300/day' },
     { id: 7, type: 'minivan', capacity: '8', name: 'Luxury Van', image: '/img/alphard.png', price: '₹2800/day' },
     { id: 8, type: 'minivan', capacity: '8', name: 'Commercial Van', image: '/img/bolero.png', price: '₹1800/day' },
-    { id: 9, type: 'minivan', capacity: '13', name: 'Family Minivan', image: '/img/Traveller.png', price: '₹2500/day' },
-    { id: 10, type: 'minivan', capacity: '17', name: 'Family Minivan', image: '/img/traveller17.png', price: '₹2800/day' },
-    { id: 11, type: 'minivan', capacity: '26', name: 'Family Minivan', image: '/img/traveller26.png', price: '₹3500/day' },
+    { id: 9, type: 'minivan', capacity: '13', name: 'Family Minivan', image: '/img/13Traveller.png', price: '₹2500/day' },
+    { id: 10, type: 'minivan', capacity: '17', name: 'Family Minivan', image: '/img/Traveller.png', price: '₹2800/day' },
+    { id: 11, type: 'minivan', capacity: '26', name: 'Family Minivan', image: '/img/26Traveller.png', price: '₹3500/day' },
 
   ];
 
@@ -39,8 +39,8 @@ function CabExplore() {
 
   return (
     <div className="cab-explore-page">
-      <section className="hero">
-        <div className="hero-content">
+      <section className="CabExplore-hero">
+        <div className="cab-explore-hero-content">
           <h1>Explore Our Cabs</h1>
           <p>Find the perfect vehicle for your journey across Odisha.</p>
         </div>

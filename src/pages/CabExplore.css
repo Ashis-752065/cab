@@ -1,9 +1,7 @@
-.cab-explore-page {
-  padding-top: 80px;
-}
 
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  no-repeat center center/cover;
+
+.CabExplore-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/booking-banner.png') no-repeat center center/cover;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -12,9 +10,10 @@
   color: var(--white);
 }
 
-.hero-content {
+.cab-explore-hero-content {
   max-width: 800px;
   padding: 0 20px;
+  color: wheat;
 }
 
 .hero h1 {

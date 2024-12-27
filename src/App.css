@@ -79,8 +79,9 @@ body {
 }
 
 /* Hero Section Styles */
-.hero {
-  /* background-image: url('/images/hero-bg.jpg'); */
+/* .hero {
+  background-image: url('/public/img/booking-banner.png');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -90,7 +91,7 @@ body {
   text-align: center;
   color: var(--white);
   position: relative;
-}
+} */
 
 .hero-title {
   font-size: 3rem;
@@ -176,7 +177,7 @@ body {
   /* background-image: url('/images/about-hero.jpg'); */
   background-size: cover;
   background-position: center;
-  height: 50vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,7 +313,7 @@ body {
 
 /* Packages Page Styles */
 .packages-hero {
-  /* background-image: url('/images/packages-hero.jpg'); */
+  /* background-image: url('/public/img/booking-banner.png'); */
   background-size: cover;
   background-position: center;
   height: 50vh;

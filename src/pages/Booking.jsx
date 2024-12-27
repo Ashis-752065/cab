@@ -137,3 +137,4 @@ Special Requests: ${formData.specialRequests}`;
 }
 
 export default Booking;
+

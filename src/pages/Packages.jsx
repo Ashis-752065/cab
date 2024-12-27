@@ -57,7 +57,7 @@ function Packages() {
 
   return (
     <div className="packages-page">
-      <section className="hero">
+      <section className="package-hero">
         <div className="hero-content">
           <h1>Discover Odisha's Wonders</h1>
           <p>Explore our curated travel packages and embark on unforgettable journeys across Odisha's most beautiful destinations.</p>
@@ -66,18 +66,20 @@ function Packages() {
 
       <section className="packages-section">
         <div className="container">
-          <h2 className="section-title">Our Popular Packages</h2>
-          <div className="packages-grid">
+          <h2 className="section-title">Our Popular Cab Packages</h2>
+          <div className="package-grid">
             {packages.map((pkg) => (
               <div key={pkg.id} className="package-card">
                 <div className="package-image">
                   <img src={pkg.image} alt={pkg.name} />
+                  <div className="package-overlay">
+                    <Link to="/booking" className="book-now-btn">Book Now</Link>
+                  </div>
                 </div>
                 <div className="package-info">
                   <h3>{pkg.name}</h3>
                   <p>{pkg.description}</p>
                   <div className="package-price">Starting from ₹{pkg.price}</div>
-                  <Link to="/booking" className="book-now-btn">Book Now</Link>
                 </div>
               </div>
             ))}
@@ -87,25 +89,25 @@ function Packages() {
 
       <section className="features-section">
         <div className="container">
-          <h2 className="section-title">Why Choose Our Packages</h2>
+          <h2 className="section-title">Why Choose Our Cab Packages</h2>
           <div className="features-grid">
             <div className="feature-item">
-              <i className="fas fa-map-marked-alt feature-icon"></i>
+              <img src="/img/Expertly Crafted Itineraries.png" alt="Company Logo" className="feature-logo" />
               <h3>Expertly Crafted Itineraries</h3>
               <p>Our travel experts design each package to showcase the best of Odisha.</p>
             </div>
             <div className="feature-item">
-              <i className="fas fa-hotel feature-icon"></i>
-              <h3>Comfortable Accommodations</h3>
-              <p>Stay in hand-picked hotels that offer comfort and local charm.</p>
+              <img src="/img/Comfortable Vehicles.png" alt="Company Logo" className="feature-logo" />
+              <h3>Comfortable Vehicles</h3>
+              <p>Travel in our well-maintained and comfortable fleet of cars.</p>
             </div>
             <div className="feature-item">
-              <i className="fas fa-users feature-icon"></i>
-              <h3>Experienced Guides</h3>
-              <p>Our knowledgeable guides bring each destination to life with their insights.</p>
+              <img src="/img/Experienced Drivers.png" alt="Company Logo" className="feature-logo" />
+              <h3>Experienced Drivers</h3>
+              <p>Our knowledgeable drivers ensure a safe and pleasant journey.</p>
             </div>
             <div className="feature-item">
-              <i className="fas fa-wallet feature-icon"></i>
+              <img src="/img/Best Price Guarantee.png" alt="Company Logo" className="feature-logo" />
               <h3>Best Price Guarantee</h3>
               <p>We offer competitive prices without compromising on quality.</p>
             </div>
