@@ -104,7 +104,7 @@ Time: ${formData.travelTime}`;
   // Packages data
   const packages = [
     { name: "Bhubaneswar City Tour", price: "₹2300", image: "img/Bhubaneswar.png" },
-    { name: "Puri Beach Getaway", price: "₹1499", image: "img/Puri.png" },
+    { name: "Puri Jagannath Temple & Sea Beach ", price: "₹1499", image: "img/Puri.png" },
     { name: "Konark Sun Temple Visit", price: "₹1299", image: "img/Konark.png" },
     { name: "Chilika Lake Adventure", price: "₹1799", image: "img/Chilika-Lake.png" },
     { name: "Similipal National Park", price: "₹2499", image: "img/Simlipal-Wildlife-Sanctuary.png" },

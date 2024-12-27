@@ -277,7 +277,7 @@ body {
 .package-info {
   padding: 20px;
   background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   color: white;

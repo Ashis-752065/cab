@@ -48,7 +48,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${hideNav ? 'hide' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <img src="/img/a1_tour_logo.png" alt="A1 Tour&Travels Logo" />
+          <img src="/img/A1_logo.png" alt="A1 Tour&Travels Logo" />
         </Link>
         <div className="menu-icon" onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}

@@ -1,6 +1,6 @@
 .navbar {
   background-color: transparent;
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,9 +26,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px;
-  max-width: 1500px;
-  padding: 0 50px;
+  height: 60px;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .navbar-logo {
@@ -36,13 +36,15 @@
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
 }
 
 .navbar-logo img {
-  height: 40px;
+  height: 50px;
+  width: 100px;
+  margin-top: -10px;
 }
 
 .nav-menu {
@@ -51,19 +53,18 @@
   justify-content: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
 }
 
-/* .nav-item {
-  height: 80px;
-} */
+.nav-item {
+  height: 60px;
+}
 
 .nav-link {
   color: #0273a7;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 25px;
   height: 100%;
   transition: all 0.3s ease;
@@ -96,18 +97,18 @@
 
 @media screen and (max-width: 960px) {
   .navbar-container {
-    padding: 0 30px;
+    padding: 0 15px;
   }
 
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
+    height: auto;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: -100%;
-    opacity: 1;
+    opacity: 0;
     transition: all 0.5s ease;
   }
 
@@ -117,44 +118,59 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-link {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
-    display: table;
+    display: block;
     color: #333;
   }
 
   .nav-link:hover {
-    color: #00acc1;
-    transition: all 0.3s ease;
-  }
-
-  .nav-item:hover {
-    border: none;
+    background-color: #f8f8f8;
   }
 
   .nav-item {
     width: 100%;
+    height: auto;
   }
 
   .navbar-logo {
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
+    left: 15px;
+    transform: translate(0, 50%);
   }
 
   .menu-icon {
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    right: 15px;
+    transform: translate(0, 50%);
     font-size: 1.8rem;
     cursor: pointer;
+  }
+
+  .nav-book-now {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-logo img {
+    height: 50px;
+    width: 100px;
+    margin-top: -10px;
+  }
+
+  .menu-icon {
+    font-size: 1.5rem;
   }
 }
 
