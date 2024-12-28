@@ -103,10 +103,10 @@ Time: ${formData.travelTime}`;
 
   // Packages data
   const packages = [
-    { name: "Bhubaneswar City Tour", price: "₹2300", image: "img/Bhubaneswar.png" },
+    { name: "Temple City Bhubaneswar Tour", price: "₹2300", image: "img/Bhubaneswar.png" },
     { name: "Puri Jagannath Temple & Sea Beach ", price: "₹1499", image: "img/Puri.png" },
-    { name: "Konark Sun Temple Visit", price: "₹1299", image: "img/Konark.png" },
-    { name: "Chilika Lake Adventure", price: "₹1799", image: "img/Chilika-Lake.png" },
+    { name: "Konark Sun Temple & Sunset Visit", price: "₹1299", image: "img/Konark.png" },
+    { name: "Chilika Lake Boating Adventure", price: "₹1799", image: "img/Chilika-Lake.png" },
     { name: "Similipal National Park", price: "₹2499", image: "img/Simlipal-Wildlife-Sanctuary.png" },
     { name: "Gopalpur Beach Retreat", price: "₹1699", image: "img/Gopalpur.png" },
     { name: "Bhitarkanika Mangroves", price: "₹2299", image: "img/Bhitarkanika.png" },
@@ -226,7 +226,7 @@ Time: ${formData.travelTime}`;
       </section>
 
       {/* Packages Section */}
-      <section className="packages-section">
+      <section className="h-packages-section">
         <h2 className="section-title">Our Popular Packages</h2>
         <div className="packages-container">
           <button className="scroll-btn prev" onClick={() => scrollHorizontally(packagesGridRef, 'left')}>

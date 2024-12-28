@@ -177,7 +177,7 @@ body {
   /* background-image: url('/images/about-hero.jpg'); */
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,7 +438,7 @@ textarea {
 .footer {
   background-color: var(--secondary-color);
   color: var(--white);
-  padding: 40px 0;
+  padding: 0px 0;
 }
 
 .footer-content {

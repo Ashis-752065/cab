@@ -129,6 +129,7 @@ body {
   position: relative;
   z-index: 100;
   /* background-image: url("/public/img/Booking2.png"); */
+  background: #f8f9fa;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -220,9 +221,9 @@ body {
 }
 
 /* Packages Section Styles */
-.packages-section {
+.h-packages-section {
   padding: 80px 0;
-  background-color: var(--white);
+  background: #f8f9fa ;
 }
 
 .section-title {
@@ -408,7 +409,7 @@ body {
 /* How It Works Section Styles */
 .how-it-works {
   padding: 80px 0;
-  background: var(--background-color);
+  background: #f8f9fa;
 }
 
 .steps-container {
@@ -478,7 +479,7 @@ body {
 /* Services Section Styles */
 .services-section {
   padding: 80px 0;
-  background: var(--white);
+  background: #f8f9fa;
 }
 
 .services-grid {
@@ -547,7 +548,7 @@ body {
 }
 
 .call-btn {
-  background: var(--secondary-color);
+  background: #1414d4;
 }
 
 /* Responsive Design */
@@ -628,6 +629,7 @@ body {
     left: 50%;
     top: 0;
     transform: translateX(-50%);
+    display: none;
   }
 
   .package-card, .fleet-card {

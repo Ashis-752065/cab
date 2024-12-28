@@ -1,8 +1,9 @@
 
 
-.about-hero {
+.abt-hero {
   background: url('/public/img/About.png')  no-repeat center center/cover;
-  height: 90vh;
+  object-fit: cover;
+  height: 115vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,7 +11,7 @@
   color: var(--white);
 }
 
-.about-hero-content {
+.abt-hero-content {
   max-width: 800px;
   padding: 0 20px;
   color: black;
@@ -29,6 +30,7 @@
 
 .about-content {
   padding: 80px 0;
+  background: var(--white);
 }
 
 .container {
@@ -77,8 +79,8 @@
   transform: scale(1.05);
 }
 
-.features-section {
-  background-color: #f9f9f9;
+.about-features-section {
+  background-color: var(--white);
   padding: 80px 0;
 }
 
@@ -95,23 +97,24 @@
   gap: 30px;
 }
 
-.feature-item {
+.abt-feature-item {
   text-align: center;
   padding: 30px;
-  background-color: var(--white);
+  background-color: #eaeaea;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
-.feature-item:hover {
+.abt-feature-item:hover {
   transform: translateY(-10px);
 }
 
 .feature-icon {
   font-size: 3rem;
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   margin-bottom: 20px;
+  justify-self: center;
 }
 
 .feature-item h3 {
